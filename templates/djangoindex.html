@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django自带的模板</title>
+</head>
+
+    <!--条件语句 if else-->
+    {% if age <= 18 %}
+        <h3>少年</h3>
+    {% elif 18 < age < 60 %}
+        <h3>成年人</h3>
+    {% else %}
+        <h3>老年人</h3>
+
+    {% endif %}
+
+
+
+
+
+    <!--循环模板-->
+    {% for item in son %}
+        <h2>{{forloop.counter0}}----{{ item }}</h2>
+    {% empty %}
+        <h3>不好意思，暂时没有数据</h3>
+    {% endfor %}
+<body>
+<h1>姓  名：{{name}}</h1>
+<h1>年  龄：{{age}}</h1>
+<h1>媳妇儿：{{wife}}</h1>
+<h1>大儿子：{{son.0}}</h1>
+<h1>小儿子：{{son.1}}</h1>
+<h1>干儿子：{{son.2}}</h1>
+</body>
+</html>

@@ -18,4 +18,6 @@ from django.conf.urls import url, include
 urlpatterns = [
     url('admin/', admin.site.urls),
     url(r'^', include('aclassview.urls')),
+    url(r'^', include('dtemplates.urls')),
+    url(r'^', include('adbs.urls')),
 ]
